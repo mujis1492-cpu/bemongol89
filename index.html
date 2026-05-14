@@ -352,33 +352,35 @@
 
     <section id="learn">
       <h2>📖 Мэдлэгийн ертөнц</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="shagai.png" alt="Шагай" class="card-img" width="35px" height="35px">
-          <span class="tag">Шагай</span>
-          <h3>Шагайн дөрвөн тал</h3>
-          <p id="lesson1">Шагай нь морь, хонь, тэмээ, ямаа гэсэн дөрвөн янзаар буудаг. Шагайгаар тоглох нь ажиглах, тоолох, хурдан сэтгэх чадварыг хөгжүүлдэг.</p>
-          <button class="btn green" onclick="markRead(1)">✅ Уншиж дууслаа</button>
-          <button class="btn blue" onclick="speakText(document.getElementById('lesson1').innerText)">🔊 Уншуулах</button>
+        <div class="grid">
+          <div class="card">
+            <img src="shagai.png" alt="Шагай" class="card-img">
+            <span class="tag">Шагай</span>
+            <h3>Шагайн дөрвөн тал</h3>
+            <p id="lesson1">Шагай нь морь, хонь, тэмээ, ямаа гэсэн дөрвөн янзаар буудаг. Шагайгаар тоглох нь ажиглах, тоолох, хурдан сэтгэх чадварыг хөгжүүлдэг.</p>
+            <button class="btn green" onclick="markRead(1)">✅ УНШИЖ ДУУСЛАА</button>
+            <button class="btn blue" onclick="speakText(document.getElementById('lesson1').innerText)">🔊 УНШУУЛАХ</button>
+          </div>
+          
+          <div class="card">
+            <img src="melhii.png" alt="Алаг мэлхий" class="card-img">
+            <span class="tag">Алаг мэлхий</span>
+            <h3>Алаг мэлхий</h3>
+            <p id="lesson2">Алаг мэлхий нь шагайгаар өрж тоглодог уламжлалт наадгай. Энэ тоглоом нь тоо бодох, ээлж хүлээх, дүрэм баримтлах чадварыг хөгжүүлдэг.</p>
+            <button class="btn green" onclick="markRead(2)">✅ УНШИЖ ДУУСЛАА</button>
+            <button class="btn blue" onclick="speakText(document.getElementById('lesson2').innerText)">🔊 УНШУУЛАХ</button>
+          </div>
+          
+          <div class="card">
+            <div class="icon">🐎</div>
+            <span class="tag">Морь уралдуулах</span>
+            <h3>Шагайн морь</h3>
+            <p id="lesson3">Шагайг морь болгон уралдуулж тоглодог. Хүүхэд аз, тэвчээр, баярлах болон хүлээцтэй байх зан чанарт суралцдаг.</p>
+            <button class="btn green" onclick="markRead(3)">✅ УНШИЖ ДУУСЛАА</button>
+            <button class="btn blue" onclick="speakText(document.getElementById('lesson3').innerText)">🔊 УНШУУЛАХ</button>
+          </div>
         </div>
-        <div class="card">
-          <img src="melhii.png" alt="Алаг мэлхий" class="card-img" width="35px" height="35px>
-          <span class="tag">Алаг мэлхий</span>
-          <h3>Алаг мэлхий</h3>
-          <p id="lesson2">Алаг мэлхий нь шагайгаар өрж тоглодог уламжлалт наадгай. Энэ тоглоом нь тоо бодох, ээлж хүлээх, дүрэм баримтлах чадварыг хөгжүүлдэг.</p>
-          <button class="btn green" onclick="markRead(2)">✅ Уншиж дууслаа</button>
-          <button class="btn blue" onclick="speakText(document.getElementById('lesson2').innerText)">🔊 Уншуулах</button>
-        </div>
-        <div class="card">
-          <div class="icon">🐎</div>
-          <span class="tag">Морь уралдуулах</span>
-          <h3>Шагайн морь</h3>
-          <p id="lesson3">Шагайг морь болгон уралдуулж тоглодог. Хүүхэд аз, тэвчээр, баярлах болон хүлээцтэй байх зан чанарт суралцдаг.</p>
-          <button class="btn green" onclick="markRead(3)">✅ Уншиж дууслаа</button>
-          <button class="btn blue" onclick="speakText(document.getElementById('lesson3').innerText)">🔊 Уншуулах</button>
-        </div>
-      </div>
-    </section>
+      </section>
 
     <section id="game">
       <h2>🎮 Үе давдаг тоглоом</h2>
