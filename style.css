@@ -45,8 +45,8 @@ header::before {
   
   /* Зургуудыг эхэнд нь, уусгах өнгийг хамгийн ард нь тавина */
   background-image: 
-    url('alhan-khee.png'), 
-    url('ulzii-khee.png');
+    url('alhankhee.png'), 
+    url('ulziikhee.png');
     
   background-position: 
     top left, 
