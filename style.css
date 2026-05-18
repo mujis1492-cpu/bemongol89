@@ -34,6 +34,7 @@ header {
     /* 🔴 Хээг дотор нь багтааж, гадагшлуулахгүй байх тохиргоо */
     overflow: hidden; 
 }
+
 header::before {
     content: "";
     position: absolute;
@@ -42,11 +43,11 @@ header::before {
     width: 100%;
     height: 100%;
     
-    /* 🔴 1. ХЭЭНҮҮДИЙГ ОРУУЛАХ (Цэвэрхэн нэршилтэй файлууд) */
+    /* 🔴 1. ХЭЭНҮҮДИЙГ ОРУУЛАХ */
     background-image: 
-        url('alhan-khee.png'),        /* 1. Алхан хээ (Дээд хүрээ дагуу) */
-        url('cloud-pattern.png'),     /* 2. Үүлэн хээ (Баруун, зүүн талд) */
-        url('ulzii-khee.png.png');    /* 3. Өлзий хээ (Төв хэсэгт 3 ширхэг) */
+        url('alhan-khee.png'),        /* 1. Алхан хээ */
+        url('cloud-pattern.png'),     /* 2. Үүлэн хээ */
+        url('ulzii-khee.png');        /* 3. Өлзий хээ (.png.png алдааг засав) */
     
     /* 🔴 2. ХЭЭНҮҮДИЙН БАЙРШИЛ */
     background-position: 
@@ -56,15 +57,15 @@ header::before {
     
     /* 🔴 3. ХЭЭНҮҮДИЙН ХЭМЖЭЭ */
     background-size: 
-        auto 12px,                     /* Алхан хээ: Нарийн тууз хэлбэрээр (Өндөр 12px) */
-        contain,                       /* Үүлэн хээ: Сонгосон хэмжээгээрээ */
-        300px 60px;                    /* Өлзий хээ: 3 ширхэг цуврах нийт хэмжээ */
+        auto 12px,                     /* Алхан хээ: Нарийн тууз (Өндөр 12px) */
+        contain,                       /* Үүлэн хээ: Багтах хэмжээгээр */
+        auto 45px;                     /* Өлзий хээ: Өндрийг нь header-тээ тааруулав */
     
     /* 🔴 4. ХЭЭНҮҮДИЙН ДАВТАГДАХ ХЭЛБЭР */
     background-repeat: 
         repeat-x,                      /* Алхан хээ: Хэвтээ чиглэлд тууз шиг үргэлжилнэ */
         no-repeat,                     /* Үүлэн хээ: Давтагдахгүй */
-        repeat-x;                      /* Өлзий хээ: Голдоо 3 ширхэг цуварна */
+        repeat-x;                      /* Өлзий хээ: Хэвтээ чиглэлд цуварна */
 
     /* 🔴 Хөх дэвсгэртэй зөөлөн уусгах тохиргоо */
     opacity: 0.18;             /* Хээг маш даруухан бүдэг харагдуулна */
@@ -199,15 +200,15 @@ h2 { color: #003b73; border-left: 9px solid var(--gold); padding-left: 12px; }
   border: 5px solid var(--gold); border-radius: 30px;
   background: white; animation: pop .45s ease;
 }
-   //Буянзаяа шагайзураг засвар
- .card-img {
-      width: 100%;
-      height: 160px;
-      object-fit: contain;
-      margin-bottom: 12px;
-      border-radius: 14px;
-}
 
+/* 🎨 Буянзаяа шагайзураг засвар */
+.card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    border-radius: 14px;
+}
 
 @keyframes pop { from { transform: scale(.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
