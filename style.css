@@ -20,17 +20,63 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, var(--blue), #003b73);
-  color: white;
-  padding: 18px 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  border-bottom: 7px solid var(--gold);
-  position: sticky;
-  top: 0;
-  z-index: 20;
+    background: linear-gradient(135deg, var(--blue), #003b73);
+    color: white;
+    padding: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 7px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    /* 🔴 Хээг дотор нь багтааж, гадагшлуулахгүй байх тохиргоо */
+    overflow: hidden; 
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* 🔴 1. ХЭЭНҮҮДИЙГ ОРУУЛАХ (Цэвэрхэн нэршилтэй файлууд) */
+    background-image: 
+        url('alhan-khee.png'),        /* 1. Алхан хээ (Дээд хүрээ дагуу) */
+        url('cloud-pattern.png'),     /* 2. Үүлэн хээ (Баруун, зүүн талд) */
+        url('ulzii-khee.png.png');    /* 3. Өлзий хээ (Төв хэсэгт 3 ширхэг) */
+    
+    /* 🔴 2. ХЭЭНҮҮДИЙН БАЙРШИЛ */
+    background-position: 
+        top center,                    /* Алхан хээ: Дээд ирмэгт */
+        left center,                   /* Үүлэн хээ: Зүүн талд */
+        center center;                 /* Өлзий хээ: Яг голд нь */
+    
+    /* 🔴 3. ХЭЭНҮҮДИЙН ХЭМЖЭЭ */
+    background-size: 
+        auto 12px,                     /* Алхан хээ: Нарийн тууз хэлбэрээр (Өндөр 12px) */
+        contain,                       /* Үүлэн хээ: Сонгосон хэмжээгээрээ */
+        300px 60px;                    /* Өлзий хээ: 3 ширхэг цуврах нийт хэмжээ */
+    
+    /* 🔴 4. ХЭЭНҮҮДИЙН ДАВТАГДАХ ХЭЛБЭР */
+    background-repeat: 
+        repeat-x,                      /* Алхан хээ: Хэвтээ чиглэлд тууз шиг үргэлжилнэ */
+        no-repeat,                     /* Үүлэн хээ: Давтагдахгүй */
+        repeat-x;                      /* Өлзий хээ: Голдоо 3 ширхэг цуварна */
+
+    /* 🔴 Хөх дэвсгэртэй зөөлөн уусгах тохиргоо */
+    opacity: 0.18;             /* Хээг маш даруухан бүдэг харагдуулна */
+    mix-blend-mode: overlay;   /* Цэнхэр фонтой уусгаж өгнө */
+    pointer-events: none;      /* Хулганаар дарагдахгүй */
+    z-index: 1;
+}
+
+/* 🔴 Лого, Цэс, Хэлний товчлуурууд хээнийхээ ДЭЭР тод харагдах тохиргоо */
+.logo, nav, .lang button, .access button {
+    position: relative;
+    z-index: 2;
 }
 
 .logo { font-size: 24px; font-weight: 900; }
