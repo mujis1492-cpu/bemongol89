@@ -45,9 +45,9 @@ header::before {
     
     /* 🔴 1. ХЭЭНҮҮДИЙГ ОРУУЛАХ */
     background-image: 
-        url('alhan-khee.png'),        /* 1. Алхан хээ */
+        url('alkhan-khee.png'),        /* 1. Алхан хээ */
         url('cloud-pattern.png'),     /* 2. Үүлэн хээ */
-        url('ulzii-khee.png');        /* 3. Өлзий хээ (.png.png алдааг засав) */
+        url('ulzii-khee.png');        /* 3. Өлзий хээ */
     
     /* 🔴 2. ХЭЭНҮҮДИЙН БАЙРШИЛ */
     background-position: 
