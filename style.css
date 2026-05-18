@@ -36,48 +36,41 @@ header {
 }
 
 header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    /* 🔴 1. ХЭЭНҮҮДИЙГ ОРУУЛАХ */
-    background-image: 
-        url('alkhan-khee.png'),        /* 1. Алхан хээ */
-        url('cloud-pattern.png'),     /* 2. Үүлэн хээ */
-        url('ulzii-khee.png');        /* 3. Өлзий хээ */
-    
-    /* 🔴 2. ХЭЭНҮҮДИЙН БАЙРШИЛ */
-    background-position: 
-        top center,                    /* Алхан хээ: Дээд ирмэгт */
-        left center,                   /* Үүлэн хээ: Зүүн талд */
-        center center;                 /* Өлзий хээ: Яг голд нь */
-    
-    /* 🔴 3. ХЭЭНҮҮДИЙН ХЭМЖЭЭ */
-    background-size: 
-        auto 12px,                     /* Алхан хээ: Нарийн тууз (Өндөр 12px) */
-        contain,                       /* Үүлэн хээ: Багтах хэмжээгээр */
-        auto 45px;                     /* Өлзий хээ: Өндрийг нь header-тээ тааруулав */
-    
-    /* 🔴 4. ХЭЭНҮҮДИЙН ДАВТАГДАХ ХЭЛБЭР */
-    background-repeat: 
-        repeat-x,                      /* Алхан хээ: Хэвтээ чиглэлд тууз шиг үргэлжилнэ */
-        no-repeat,                     /* Үүлэн хээ: Давтагдахгүй */
-        repeat-x;                      /* Өлзий хээ: Хэвтээ чиглэлд цуварна */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* 1. Хээг дахин дарааллаар нь оруулах */
+  background-image: 
+    url('alhan-khee.png'),        /* 1. Алхан хээ */
+    url('cloud-pattern.png'),     /* 2. Үүлэн хээ */
+    url('ulzii-khee.png');        /* 3. Өлзий хээ */
+  
+  /* 2. Байршил: Алхан хээг дээд ирмэгт, үүлүүдийг хажууд, өлзийг голд */
+  background-position: 
+    top left,                     /* Алхан хээ: Зүүн дээд бэлчирт */
+    left center,                  /* Үүлэн хээ: Зүүн талд */
+    center center;                /* Өлзий хээ: Төв хэсэгт */
+  
+  /* 3. Хэмжээ */
+  background-size: 
+    auto 12px,                    /* Алхан хээ: Өндөр нь 12px нарийн тууз */
+    contain,                      /* Үүлэн хээ */
+    auto 45px;                    /* Өлзий хээ */
+  
+  /* 4. Давтагдах хэлбэр */
+  background-repeat: 
+    repeat-x,                     /* Алхан хээ: Хэвтээ чиглэлд тууз шиг үргэлжилнэ 🌟 */
+    no-repeat, 
+    no-repeat;                    /* Өлзий хээг голд нь ганц байлгах бол no-repeat */
 
-    /* 🔴 Хөх дэвсгэртэй зөөлөн уусгах тохиргоо */
-    opacity: 0.18;             /* Хээг маш даруухан бүдэг харагдуулна */
-    mix-blend-mode: overlay;   /* Цэнхэр фонтой уусгаж өгнө */
-    pointer-events: none;      /* Хулганаар дарагдахгүй */
-    z-index: 1;
-}
-
-/* 🔴 Лого, Цэс, Хэлний товчлуурууд хээнийхээ ДЭЭР тод харагдах тохиргоо */
-.logo, nav, .lang button, .access button {
-    position: relative;
-    z-index: 2;
+  opacity: 0.16;             
+  mix-blend-mode: overlay;   
+  pointer-events: none;      
+  z-index: 1;                
 }
 
 .logo { font-size: 24px; font-weight: 900; }
