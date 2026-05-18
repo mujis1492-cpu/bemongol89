@@ -25,25 +25,23 @@
       color: var(--dark);
       line-height: 1.6;
     }
-<header>
-  <div class="logo-container">
-    <img src="logo88.png" alt="TEAM12 Лого" class="main-logo">
-    
-    <span class="logo-text">Нүүдэлчин Наадамчид</span>
-  </div>
 
-  <nav>
-    <a href="#learn" data-mn="Мэдлэг" data-en="Learn">Мэдлэг</a>
-    <a href="#game" data-mn="Тоглоом" data-en="Game">Тоглоом</a>
-    <a href="#reward" data-mn="Урамшуулал" data-en="Reward">Урамшуулал</a>
-  </nav>
+    header {
+      background: linear-gradient(135deg, var(--blue), #003b73);
+      color: white;
+      padding: 12px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      border-bottom: 7px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      overflow: hidden; 
+    }
 
-  <div class="lang">
-    <button onclick="changeLang('mn')">🇲🇳 MN</button>
-    <button onclick="changeLang('en')">🇺🇸 EN</button>
-  </div>
-</header>
-   header::before {
+    header::before {
       content: "";
       position: absolute;
       top: 50%;
@@ -61,17 +59,44 @@
       z-index: 1;                /* Текстүүдийн ард байрлана */
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: 900;
+    /* 🔴 Лого блокны тохиргоо */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo88 {
+      height: 65px; /* Логоны өндрийг цэгцтэй болгов */
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-family: 'Pacifico', 'Brush Script MT', cursive, Arial, sans-serif; /* Гараар бичсэн мэт уран загвар */
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      white-space: nowrap;
+    }
+
+    nav, .lang {
+      position: relative;
+      z-index: 2;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 8px;
+      margin: 0 12px;
       font-weight: bold;
+      font-size: 16px;
     }
+    
+    nav a:hover { color: var(--gold); }
 
     .lang button, .access button {
       border: none;
@@ -169,6 +194,16 @@
 
     .card h3 { color: var(--red); margin-top: 8px; }
     .icon { font-size: 60px; text-align: center; }
+    
+    /* 🎨 Шагай болон Алаг мэлхийн зураг тохируулга */
+    .card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      border-radius: 14px;
+    }
+
     .tag {
       display: inline-block;
       background: var(--gold);
@@ -341,7 +376,7 @@
     }
 
     @media (max-width: 760px) {
-      header { flex-direction: column; }
+      header { flex-direction: column; gap: 10px; }
       nav a { display: inline-block; margin: 5px; }
       .hero h1 { font-size: 38px; }
       .hero::after { font-size: 26px; letter-spacing: 8px; }
@@ -349,9 +384,12 @@
   </style>
 </head>
 <body>
+
   <header>
-     <div class="logo">
-  <img src="logo88.png" width="200" alt="logo88" class="logo88"> Нүүдэлчин Наадамчид</div>
+    <div class="logo-container">
+      <img src="logo88.png" alt="TEAM12 Лого" class="logo88"> 
+      <span class="logo-text">Нүүдэлчин Наадамчид</span>
+    </div>
     <nav>
       <a href="#learn" data-mn="Мэдлэг" data-en="Learn">Мэдлэг</a>
       <a href="#game" data-mn="Тоглоом" data-en="Game">Тоглоом</a>
@@ -375,7 +413,7 @@
       <h2>📖 Мэдлэгийн ертөнц</h2>
         <div class="grid">
           <div class="card">
-            <img src="shagai.png" alt="Шагай" class="card-img" width="100" height="100>
+            <img src="shagai.png" alt="Шагай" class="card-img">
             <span class="tag">Шагай</span>
             <h3>Шагайн дөрвөн тал</h3>
             <p id="lesson1">Шагай нь морь, хонь, тэмээ, ямаа гэсэн дөрвөн янзаар буудаг. Шагайгаар тоглох нь ажиглах, тоолох, хурдан сэтгэх чадварыг хөгжүүлдэг.</p>
@@ -707,5 +745,3 @@
   </script>
 </body>
 </html>
-
-
