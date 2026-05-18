@@ -43,36 +43,28 @@ header::before {
   width: 100%;
   height: 100%;
   
-  /* 1. Хээг дахин дарааллаар нь оруулах */
+  /* Зургуудыг эхэнд нь, уусгах өнгийг хамгийн ард нь тавина */
   background-image: 
-    url('alhan-khee.png'),        /* 1. Алхан хээ */
-    url('cloud-pattern.png'),     /* 2. Үүлэн хээ */
-    url('ulzii-khee.png');        /* 3. Өлзий хээ */
-  
-  /* 2. Байршил: Алхан хээг дээд ирмэгт, үүлүүдийг хажууд, өлзийг голд */
+    url('alhan-khee.png'), 
+    url('ulzii-khee.png');
+    
   background-position: 
-    top left,                     /* Алхан хээ: Зүүн дээд бэлчирт */
-    left center,                  /* Үүлэн хээ: Зүүн талд */
-    center center;                /* Өлзий хээ: Төв хэсэгт */
-  
-  /* 3. Хэмжээ */
+    top left, 
+    center center;
+    
   background-size: 
-    auto 12px,                    /* Алхан хээ: Өндөр нь 12px нарийн тууз */
-    contain,                      /* Үүлэн хээ */
-    auto 45px;                    /* Өлзий хээ */
-  
-  /* 4. Давтагдах хэлбэр */
+    auto 14px, 
+    contain;
+    
   background-repeat: 
-    repeat-x,                     /* Алхан хээ: Хэвтээ чиглэлд тууз шиг үргэлжилнэ 🌟 */
-    no-repeat, 
-    no-repeat;                    /* Өлзий хээг голд нь ганц байлгах бол no-repeat */
-
-  opacity: 0.16;             
-  mix-blend-mode: overlay;   
-  pointer-events: none;      
-  z-index: 1;                
+    repeat-x, 
+    no-repeat;
+    
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
 }
-
 .logo { font-size: 24px; font-weight: 900; }
 
 nav a {
