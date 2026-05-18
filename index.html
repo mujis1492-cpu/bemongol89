@@ -25,7 +25,24 @@
       color: var(--dark);
       line-height: 1.6;
     }
+<header>
+  <div class="logo-container">
+    <img src="team12-logo.png" alt="TEAM12 Лого" class="main-logo">
+    
+    <span class="logo-text">Нүүдэлчин Наадамчид</span>
+  </div>
 
+  <nav>
+    <a href="#learn" data-mn="Мэдлэг" data-en="Learn">Мэдлэг</a>
+    <a href="#game" data-mn="Тоглоом" data-en="Game">Тоглоом</a>
+    <a href="#reward" data-mn="Урамшуулал" data-en="Reward">Урамшуулал</a>
+  </nav>
+
+  <div class="lang">
+    <button onclick="changeLang('mn')">🇲🇳 MN</button>
+    <button onclick="changeLang('en')">🇺🇸 EN</button>
+  </div>
+</header>
    header::before {
       content: "";
       position: absolute;
