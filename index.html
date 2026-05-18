@@ -26,18 +26,22 @@
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, var(--blue), #003b73);
-      color: white;
-      padding: 18px 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      border-bottom: 7px solid var(--gold);
-      position: sticky;
-      top: 0;
-      z-index: 20;
+   header::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px; 
+      height: 70px; 
+      background-image: url('ulzii-khee.png'); 
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.15;             /* Маш даруухан бүдэг харагдуулах уусгалт */
+      mix-blend-mode: overlay;   /* Цэнхэр фонтой зөөлөн уусгаж өгнө */
+      pointer-events: none;      
+      z-index: 1;                /* Текстүүдийн ард байрлана */
     }
 
     .logo {
